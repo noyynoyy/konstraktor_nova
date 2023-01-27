@@ -1,0 +1,116 @@
+public class Tugas_Konstraktor {
+    
+    
+    public Tugas_Konstraktor (){
+        this.panjang = panjang;
+        this.lebar = panjang;
+        this.sisi = 9;
+        this.d1 = 13;
+        this.d2 = 12;
+        this.jari = 15;
+        this.sisipr = 45;
+        this.sisise = 36;
+        this.alas = 55;
+        this.tinggi = 36;
+    }
+    
+    //  P E R S E G I P A N J A N G
+    int panjang,lebar;
+    public void luasperpan (){
+        int l = panjang*lebar;
+        JOptionPane.showMessageDialog(null,"Luas Persegi Panjang : "+l);
+    }
+    
+    public void kelilingperpan (){
+        int k = 2*(panjang+lebar);
+        JOptionPane.showMessageDialog(null,"Keliling Persegi Panjang : "+k);
+    }   
+    
+    
+    // B E L A H  K E T U P A T
+    int sisi, d1, d2;
+    public void luasbl (){
+        double luas = 0.5*d1*d2;
+        System.out.println("Luas belah ketupat: "+luas);
+    }
+    
+    public void kelilingbl (){
+        int keliling = 4*sisi;
+        System.out.println("Keliling belah ketupat: "+keliling);
+    }
+    
+    
+    // L I N G K A R A N 
+    double phi = 3.14;
+    double jari;
+    public void luaslingkaran (){                                               
+        double luaslingkaran = phi*jari*jari;
+        System.out.println("Luas lingkaran : "+luaslingkaran);
+    }
+    
+    public void kelilinglingkaran(){                                            
+        double keliling = (2*jari)*phi;
+        System.out.println("Keliling lingkarang : "+keliling);
+    }
+    
+    
+    // P E R S E G I
+    int sisipr;
+    public void luaspersegi(){
+        int luaspersegi = sisipr*sisipr;
+        System.out.println("Luas persegi = "+luaspersegi);
+    }
+    
+    public void kelilingpersegi(){
+        int kelilingpersegi = 4*sisipr;
+        System.out.println("Keliling persegi = "+kelilingpersegi);
+    }
+    
+    
+    // S E G I T I G A
+    int alas,tinggi,sisise;
+    public void luassegi(){
+    double luas = 0.5*alas*tinggi;
+        System.out.println("Luas segitiga : "+luas);
+    }       
+    
+    public void kelilingegi (){
+    double keliling = sisise+sisise+sisise;
+        System.out.println("Keliling segitiga : "+keliling);
+    }
+    
+    
+    
+    public static void main(String[] args) {
+        Tugas_Konstraktor kn = new Tugas_Konstraktor ();
+        
+        kn.panjang=Integer.parseInt(JOptionPane.showInputDialog("Panjang: "));
+        kn.lebar=Integer.parseInt(JOptionPane.showInputDialog("lebar: "));
+        kn.luasperpan();
+        kn.kelilingperpan();
+        
+        System.out.println("B E L A H   K E T U P A T");
+        kn.luasbl();
+        kn.kelilingbl();
+        System.out.println();
+        
+        
+        System.out.println("L I N G K A R A N ");
+        kn.luaslingkaran();
+        kn.kelilinglingkaran();
+        System.out.println();
+        
+        
+        System.out.println("P E R S E G I");
+        kn.luaspersegi();
+        kn.kelilingpersegi();
+        System.out.println();
+        
+        
+        System.out.println("S E G I T I G A");
+        kn.luassegi();
+        kn.kelilingegi();
+        System.out.println();
+        
+    }
+}
